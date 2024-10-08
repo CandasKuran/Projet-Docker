@@ -12,6 +12,7 @@ services:
     volumes:
       - ./wordpress:/var/www/html
 
+# 127.0.0.1
   db:
     image: mysql:5.7
     restart: always
