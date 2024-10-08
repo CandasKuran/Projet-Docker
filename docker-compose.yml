@@ -15,10 +15,12 @@ services:
   db:
     image: mysql:5.7
     restart: always
+    ports:
+      - "3306:3306"   # Mapping du port MySQL pour permettre la connexion externe
     environment:
       MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
       MYSQL_ROOT_PASSWORD: rootpassword
     volumes:
       - ./config/db_data:/var/lib/mysql
